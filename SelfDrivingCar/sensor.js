@@ -10,7 +10,7 @@ class Sensor{
     }
 
     update(roadBorders){
-        this.#castRays;
+        this.#castRays();
         this.readings = [];
         for(let i = 0; i<this.rayCount;i++){
             this.readings.push(
@@ -78,6 +78,7 @@ class Sensor{
                 end.x,
                 end.y
             );
+            ctx.stroke();
 
             ctx.beginPath();
             ctx.lineWidth = 2;
